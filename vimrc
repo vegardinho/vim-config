@@ -1,6 +1,7 @@
 set nocompatible              " be iMproved, required
 filetype off                  " required
 set encoding=utf-8
+set mouse=a
 
 "Ensure Vundle functions properly on fish shell
 set shell=/bin/bash
