@@ -13,8 +13,22 @@ call vundle#begin()
 
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
-Plugin 'git://git.wincent.com/command-t.git'
+
+" The following are examples of different formats supported.
+" Keep Plugin commands between vundle#begin/end.
+" plugin on GitHub repo
 Plugin 'tpope/vim-fugitive'
+" plugin from http://vim-scripts.org/vim/scripts.html
+" Plugin 'L9'
+" Git plugin not hosted on GitHub
+Plugin 'git://git.wincent.com/command-t.git'
+" git repos on your local machine (i.e. when working on your own plugin)
+"Plugin 'file:///home/gmarik/path/to/plugin'
+" The sparkup vim script is in a subdirectory of this repo called vim.
+" Pass the path to set the runtimepath properly.
+"Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
+" Install L9 and avoid a Naming conflict if you've already installed a
+" different version somewhere else.
 Plugin 'scrooloose/nerdtree'
 Plugin 'junegunn/fzf.vim', {'rtp': 'plugin'}
 Plugin 'xolox/vim-misc'
@@ -134,6 +148,7 @@ syntax on
 "autocmd! FileType java call CSyntaxAfter()
 
 "highlight LineNr ctermfg=grey
+"colorscheme slate
 
 nnoremap Q <Nop>
 
@@ -160,8 +175,3 @@ nnoremap p p==
 
 "Save and run python scripts upon <F5>
 imap <F5> <Esc>:w<CR>:!clear;python %<CR>
-
-
-"Change colorscheme
-colorscheme base16-materia
-set termguicolors
