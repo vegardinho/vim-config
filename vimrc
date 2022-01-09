@@ -163,7 +163,9 @@ endif
 " inoremap //< <Esc>byei<<Esc>ea></<Esc>pa><Esc>F<i<CR><Esc>O
 nnoremap ci< T>dt<i
 nnoremap ci> T>dt<i
-set guicursor=a:blinkon100
+
+
+set guicursor=i:ver25-iCursor
 
 " autocmd VimEnter * DoShowMarks!
 " Write the swap file every [updatetime] ms. Showmarks relies on this to
@@ -175,3 +177,7 @@ nnoremap p p==
 
 "Save and run python scripts upon <F5>
 imap <F5> <Esc>:w<CR>:!clear;python %<CR>
+
+"Change colorscheme
+colorscheme base16-materia
+set termguicolors
