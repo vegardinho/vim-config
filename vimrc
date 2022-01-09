@@ -2,6 +2,9 @@ set nocompatible              " be iMproved, required
 filetype off                  " required
 set encoding=utf-8
 
+"Ensure Vundle functions properly on fish shell
+set shell=/bin/bash
+
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
