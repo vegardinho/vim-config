@@ -1,6 +1,8 @@
 set nocompatible              " be iMproved, required
 filetype off                  " required
 set encoding=utf-8
+
+"Enable clicking to move cursor (if compatible terminal)
 set mouse=a
 
 "Ensure Vundle functions properly on fish shell
@@ -166,7 +168,17 @@ nnoremap ci< T>dt<i
 nnoremap ci> T>dt<i
 
 
-set guicursor=i:ver25-iCursor
+" tmux will only forward escape sequences to the terminal if surrounded by a DCS sequence
+" set insert mode to vertical line   
+let &t_SI .= "\<esc>Ptmux;\<esc>\<esc>[6 q\<esc>\\"
+" set normal mode to block
+let &t_EI .= "\<esc>Ptmux;\<esc>\<esc>[2 q\<esc>\\"
+" set replace mode to underscore
+let &t_SR .= "\<esc>Ptmux;\<esc>\<esc>[4 q\<esc>\\"
+
+"Normal setting for vertical line
+"set guicursor=i:ver25-iCursor
+
 
 " autocmd VimEnter * DoShowMarks!
 " Write the swap file every [updatetime] ms. Showmarks relies on this to
