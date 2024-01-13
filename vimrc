@@ -92,8 +92,8 @@ if has("autocmd")
 
 else
 
-  set autoindent		" always set autoindenting on
-  " set smartindent	" Enable smart-indent
+ "set autoindent		" always set autoindenting on
+ set smartindent	" Enable smart-indent
 
 endif " has("autocmd")
 
@@ -183,7 +183,7 @@ let &t_SR .= "\<esc>Ptmux;\<esc>\<esc>[4 q\<esc>\\"
 " autocmd VimEnter * DoShowMarks!
 " Write the swap file every [updatetime] ms. Showmarks relies on this to
 " update marks.
-set updatetime=20
+set updatetime=4000
 
 "Plasserer cursor etter innliming som default, i stedet for på starten av linja
 nnoremap p p==
