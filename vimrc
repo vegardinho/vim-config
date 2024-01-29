@@ -41,6 +41,8 @@ Plugin 'chriskempson/base16-vim'
 Plugin 'xmledit'
 Plugin 'qpkorr/vim-bufkill'
 Plugin 'tComment'
+#Choose verison. Lua only supports neovim, but is faster
+let g:CommandTPreferredImplementation='lua'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
